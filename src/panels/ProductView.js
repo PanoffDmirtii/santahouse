@@ -1,19 +1,19 @@
 import {
+  Card,
+  CardScroll,
+  Div,
+  Group,
+  InfoRow,
   Panel,
   PanelHeader,
   PanelHeaderBack,
-  Div,
-  Group,
-  CardScroll,
-  Card,
   SimpleCell,
-  InfoRow,
 } from "@vkontakte/vkui";
 import React, { useContext } from "react";
 import { AppContext } from "../App";
-import { DecorationItem } from "../components/DecorationItem";
+import Item from "../components/Item";
 
-export const DecorationView = (props) => {
+export const ProductView = (props) => {
   const { id } = props;
   const context = useContext(AppContext);
 
@@ -21,15 +21,13 @@ export const DecorationView = (props) => {
     <Panel id={id}>
       <PanelHeader
         left={
-          <PanelHeaderBack
-            onClick={() => context.setActivePanel("decoration")}
-          />
+          <PanelHeaderBack onClick={() => context.setActivePanel("products")} />
         }
       >
-        Какой то дом
+        Какой то товар
       </PanelHeader>
       <Div>
-        <DecorationItem />
+        <Item />
         <Group
           separator="hide"
           description="Рекомендуемый размер карточки — 144px"

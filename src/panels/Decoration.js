@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
-import { Panel, PanelHeader, Div } from '@vkontakte/vkui';
-import { DecorationItem } from '../components/DecorationItem';
-import { AppContext } from '../App';
+import React, { useContext } from "react";
+import { Panel, PanelHeader, Div } from "@vkontakte/vkui";
+import { DecorationItem } from "../components/DecorationItem";
 
 export const Decoration = (props) => {
   const { id } = props;
@@ -20,4 +19,4 @@ export const Decoration = (props) => {
       </Div>
     </Panel>
   );
-}; 
+};

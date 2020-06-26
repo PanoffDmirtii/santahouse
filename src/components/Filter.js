@@ -13,14 +13,14 @@ export const Filter = () => {
   return (
     <CardScroll >
       <Card size='s' mode='outline'>
-        <div style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center' }}
+        <div style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           onClick={handleActiveFilter}
         >
           Уличное освещение
         </div>
       </Card>
       <Card size='s'>
-        <div style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center' }}
+        <div style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           onClick={handleActiveFilter}
         >
           Интерьер
@@ -31,7 +31,7 @@ export const Filter = () => {
       </Card>
       <Card size='s'>
         <div
-          style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center' }}
+          style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           onClick={handleActiveFilter}
         >
           Бахрома
@@ -39,7 +39,7 @@ export const Filter = () => {
       </Card>
       <Card size='s'>
         <div
-          style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center' }}
+          style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           onClick={handleActiveFilter}
         >
           Нити
@@ -47,7 +47,7 @@ export const Filter = () => {
       </Card>
       <Card size='s'>
         <div
-          style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center' }}
+          style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           onClick={handleActiveFilter}
         >
           Лента
@@ -55,7 +55,7 @@ export const Filter = () => {
       </Card>
       <Card size='s'>
         <div
-          style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center' }}
+          style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           onClick={handleActiveFilter}
         >
           Зановес
@@ -63,7 +63,7 @@ export const Filter = () => {
       </Card>
       <Card size='s'>
         <div
-          style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center' }}
+          style={{ height: 50, color: '#000', borderRadius: 8, width: 100, textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           onClick={handleActiveFilter}
         >
           Фигуры

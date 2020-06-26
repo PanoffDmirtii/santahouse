@@ -5,9 +5,7 @@ import { AppContext } from '../App';
 export const DecorationItem = () => {
 
   const context = useContext(AppContext);
-  const handleClick = () => {
-    console.log(12312312);
-    
+  const handleClick = () => { 
     context.setActivePanel('decorationView')
   }
 

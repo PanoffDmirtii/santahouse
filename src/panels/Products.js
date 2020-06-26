@@ -1,12 +1,20 @@
-import { Card, CardScroll, Group, Panel, PanelHeader, Div } from '@vkontakte/vkui';
-import React from 'react';
-import Item from '../components/Item';
-import { Stock } from '../components/Stock';
-import { Filter } from '../components/Filter';
-import { PopularItem } from '../components/PopularItem';
+import {
+  Card,
+  CardScroll,
+  Group,
+  Panel,
+  PanelHeader,
+  Div,
+} from "@vkontakte/vkui";
+import React from "react";
+import Item from "../components/Item";
+import { Stock } from "../components/Stock";
+import { Filter } from "../components/Filter";
+import { PopularItem } from "../components/PopularItem";
 
 export const Products = (props) => {
   const { id } = props;
+
   return (
     <Panel id={id}>
       <PanelHeader>Товары</PanelHeader>
@@ -21,10 +29,10 @@ export const Products = (props) => {
       </Group>
 
       <Group separator="hide" description="Популярные">
-        <PopularItem/>
+        <PopularItem />
       </Group>
-      <Group  description="Фильтр">
-        <Filter/>
+      <Group description="Фильтр">
+        <Filter />
       </Group>
       <Div>
         <Item />
