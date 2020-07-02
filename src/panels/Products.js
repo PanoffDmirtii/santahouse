@@ -13,7 +13,7 @@ import { Filter } from "../components/Filter";
 import { PopularItem } from "../components/PopularItem";
 
 export const Products = (props) => {
-  const { id } = props;
+  const { id, products } = props;
 
   return (
     <Panel id={id}>
@@ -35,11 +35,7 @@ export const Products = (props) => {
         <Filter />
       </Group>
       <Div>
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
+        {products && products.map( (item, index) => <Item productData={item} key={index}/>)}
       </Div>
     </Panel>
   );

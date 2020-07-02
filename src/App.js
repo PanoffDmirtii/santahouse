@@ -1,6 +1,6 @@
 import { Epic, Tabbar, TabbarItem, View } from "@vkontakte/vkui/";
 import "@vkontakte/vkui/dist/vkui.css";
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import { Backet } from "./panels/Backet";
 import { Decoration } from "./panels/Decoration";
 import { Products } from "./panels/Products";
@@ -14,19 +14,26 @@ import Icon28UserCircleOutline from "@vkontakte/icons/dist/28/user_circle_outlin
 import Icon28MarketOutline from "@vkontakte/icons/dist/28/market_outline";
 import { ProductView } from "./panels/ProductView";
 import { LoaderApp } from "./panels/LoaderApp";
+import { connect } from "react-redux";
+import { getVkUserData, getProducts } from "./store/action";
 
 export const AppContext = createContext();
 
-const App = () => {
+const App = (props) => {
+  const {getVkUserData, user, getProducts, products} = props;
   const [activeStory, setActiveStory] = useState('');
   const [activePanel, setActivePanel] = useState('products');
+
+  useEffect(getVkUserData, [])
+  useEffect(getProducts, [])
 
   const handleTabb = (tab) => {
     setActiveStory(tab);
     setActivePanel(tab);
 	};
 
-
+  console.log(props);
+  
 
 	if (!activeStory) {
 		setTimeout( () => handleTabb('products'), 2000)
@@ -76,10 +83,10 @@ const App = () => {
         }
       >
         <View id="profile" activePanel="profile">
-          <Profile id="profile" />
+          <Profile id="profile" user={user}/>
         </View>
         <View id="products" activePanel={activePanel}>
-          <Products id="products" />
+          <Products id="products" products={products}/>
           <ProductView id="productView" />
         </View>
         <View id="backet" activePanel="backet">
@@ -94,4 +101,13 @@ const App = () => {
   );
 };
 
-export default App;
+export default connect(
+  state => ({
+    user: state.user,
+    products: state.products
+  }),
+  {
+    getVkUserData,
+    getProducts
+  }
+)(App);
